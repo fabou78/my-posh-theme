@@ -98,7 +98,7 @@
           "properties": {
             "display_mode": "files"
           },
-          "template": " {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}({{ .Venv }}) {{ end }}\ue235{{ .Major }}.{{ .Minor }}{{ end }} ",
+          "template": " {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} | {{ end }}\ue235 {{ .Major }}.{{ .Minor }}{{ end }} ",
           "foreground": "#111111",
           "powerline_symbol": "\ue0b2",
           "background": "#FFD43B",
@@ -214,6 +214,19 @@
           "style": "plain"
         }
       ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "template": " ❯",
+          "foreground": "#007ACC",
+          "type": "text",
+          "style": "plain"
+        }
+      ],
+      "newline": false
     }
   ],
   "version": 3,
