@@ -27,7 +27,7 @@
              "style": "full"
            },
            "leading_diamond": "<transparent,background>\ue0b0</>",
-           "template": " \uf07c {{ .Path }} ",
+           "template": " \uf07c  {{ .Path }} ",
            "foreground": "#e4e4e4",
            "background": "#3465a4",
            "type": "path",
@@ -59,7 +59,7 @@
            "options": {
              "fetch_version": true
            },
-           "template": " {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}\ue718 {{ .Full }} ",
+           "template": " {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}\ued0d {{ .Full }} ",
            "foreground": "#ffffff",
            "powerline_symbol": "\ue0b0",
            "background": "#689f63",
@@ -114,7 +114,7 @@
            },
            "style": "diamond",
            "template": " {{ if gt .Code 0 }}\uf421{{ else }}\uf469{{ end }} ",
-           "trailing_diamond": "\ue0b4",
+           "trailing_diamond": "",
            "type": "status"
          }
        ]
@@ -127,9 +127,6 @@
            "background": "#83769c",
            "foreground": "#ffffff",
            "powerline_symbol": "\ue0b2",
-           "options": {
-             "always_enabled": true
-           },
            "style": "powerline",
            "template": " \ueba2 {{ .FormattedMs }} ",
            "type": "executiontime",
@@ -152,7 +149,10 @@
          },
          {
            "trailing_diamond": "\ue0b0\u2500\u256e",
-           "template": " {{ .CurrentDate | date .Format }} \uf017 ",
+           "options": {
+            "time_format": "\uf073 02/01/2006 \uf017 15:04:05"
+          },
+           "template": "  {{ .CurrentDate | date .Format }} ",
            "foreground": "#000000",
            "background": "#d3d7cf",
            "type": "time",
@@ -190,7 +190,7 @@
        "alignment": "left",
        "segments": [
          {
-           "template": " ❯",
+           "template": " \ue285",
            "foreground": "#007ACC",
            "type": "text",
            "style": "plain"
